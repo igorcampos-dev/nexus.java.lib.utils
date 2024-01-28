@@ -15,4 +15,11 @@ class UtilsTest {
         assertEquals(capacity, randomHash.length());
         assertTrue(randomHash.matches("[a-zA-Z0-9]+"));
     }
+
+    @Test
+    void testReplace() {
+        UtilsImpl utils = new UtilsImpl();
+        String result = utils.replace("Hello%20World");
+        assertEquals("Hello World", result);
+    }
 }

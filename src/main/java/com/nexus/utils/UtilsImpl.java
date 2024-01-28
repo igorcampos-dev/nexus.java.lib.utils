@@ -14,4 +14,9 @@ public class UtilsImpl implements Utils {
             for (int i = 0; i < capacity; i++) sb.append(AB.charAt(new SecureRandom().nextInt(AB.length())));
             return sb.toString();
     }
+
+    @Override
+    public String replace(String object) {
+       return object.replace("%20", " ");
+    }
 }
