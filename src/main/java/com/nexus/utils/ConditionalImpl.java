@@ -1,7 +1,10 @@
 package com.nexus.utils;
 
+import org.springframework.stereotype.Service;
+
 import java.util.function.Supplier;
 
+@Service
 public class ConditionalImpl<T> implements Conditional<T> {
 
     private final boolean condition;
