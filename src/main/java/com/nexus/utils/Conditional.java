@@ -1,21 +1,20 @@
 package com.nexus.utils;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
-
 import java.util.function.Supplier;
 
 @Service
+@AllArgsConstructor
+@NoArgsConstructor
 public class Conditional<T>{
 
-    private final boolean condition;
-    private final Runnable runnable;
-    private final Supplier<T> supplier;
+    private boolean condition;
+    private Runnable runnable;
+    private Supplier<T> supplier;
 
-    public Conditional(boolean condition, Runnable runnable, Supplier<T> supplier) {
-        this.condition = condition;
-        this.runnable = runnable;
-        this.supplier = supplier;
-    }
+
 
     public Conditional<T> when(boolean condition, Runnable runnable) {
         return new Conditional<>(condition, runnable, null);
