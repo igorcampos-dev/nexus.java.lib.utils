@@ -7,7 +7,7 @@ class UtilsTest {
 
     @Test
     void testRandomHash() {
-        UtilsImpl utils = new UtilsImpl();
+        Utils utils = new Utils();
         int capacity = 10;
         String randomHash = utils.randomHash(capacity);
 
@@ -18,7 +18,7 @@ class UtilsTest {
 
     @Test
     void testReplace() {
-        UtilsImpl utils = new UtilsImpl();
+        Utils utils = new Utils();
         String result = utils.replace("Hello%20World");
         assertEquals("Hello World", result);
     }

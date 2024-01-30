@@ -10,16 +10,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Service
-public class ReadersImpl implements ReadersService {
+public class Readers{
 
-    @Override
     public String fileHtmlConfirmacao(String html, String path) throws IOException {
         String filePath = path.concat(html);
         byte[] encoded = Files.readAllBytes(Paths.get(filePath));
         return new String(encoded, StandardCharsets.UTF_8);
     }
 
-    @Override
     public String fileHtml(String filename, String path) throws IOException {
         Path filePath = Path.of(path.concat(filename).concat(".html"));
         byte[] fileBytes = Files.readAllBytes(filePath);
