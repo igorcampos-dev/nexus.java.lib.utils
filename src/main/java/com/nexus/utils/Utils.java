@@ -2,6 +2,7 @@ package com.nexus.utils;
 
 import org.springframework.stereotype.Service;
 import java.security.SecureRandom;
+import java.util.Base64;
 
 @Service
 public class Utils {
@@ -16,5 +17,9 @@ public class Utils {
 
     public String replace(String object) {
        return object.replace("%20", " ");
+    }
+
+    public String toBase64(byte[] bytes){
+        return Base64.getEncoder().encodeToString(bytes);
     }
 }
