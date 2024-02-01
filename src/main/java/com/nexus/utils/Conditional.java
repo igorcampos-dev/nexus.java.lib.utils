@@ -14,8 +14,6 @@ public class Conditional<T>{
     private Runnable runnable;
     private Supplier<T> supplier;
 
-
-
     public Conditional<T> when(boolean condition, Runnable runnable) {
         return new Conditional<>(condition, runnable, null);
     }
