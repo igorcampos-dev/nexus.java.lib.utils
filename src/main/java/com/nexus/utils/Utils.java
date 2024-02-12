@@ -15,8 +15,13 @@ public class Utils {
             return sb.toString();
     }
 
-    public String replace(String object) {
+    @Deprecated
+    public static String replace(String object) {
        return object.replace("%20", " ");
+    }
+
+    public static String formatCPF(String cpf) {
+        return cpf.replaceAll("[^0-9]", "");
     }
 
     public String toBase64(byte[] bytes){

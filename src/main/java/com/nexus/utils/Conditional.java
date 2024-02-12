@@ -1,10 +1,12 @@
 package com.nexus.utils;
 
+import jdk.jfr.Experimental;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 import java.util.function.Supplier;
 
+@Experimental
 @Service
 @AllArgsConstructor
 @NoArgsConstructor
