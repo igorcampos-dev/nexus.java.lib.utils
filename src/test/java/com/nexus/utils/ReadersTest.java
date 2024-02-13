@@ -6,15 +6,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ReadersTest {
 
-
-    @Test
-    void testFileHtmlConfirmacaoFileNotFound() {
-        Readers readers = new Readers();
-        assertThrows(RuntimeException.class, () -> {
-            readers.fileHtmlConfirmacao("nonexistentfile");
-        });
-    }
-
     @Test
     void testFileHtmlFileNotFound() {
         Readers readers = new Readers();

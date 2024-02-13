@@ -17,17 +17,6 @@ public class Readers{
     private static String PATH = "src/main/resources/messages/actions/";
 
     /**
-     * Lê o conteúdo de um arquivo HTML de confirmação.
-     * @param filename o nome do arquivo HTML (sem a extensão .html)
-     * @return uma string contendo o conteúdo do arquivo HTML de confirmação
-     */
-    public String fileHtmlConfirmacao(String filename){
-        Path filePath = this.getPath(filename);
-        byte[] fileByte = this.getBytesFile(filePath);
-        return new String(fileByte, StandardCharsets.UTF_8);
-    }
-
-    /**
      * Lê o conteúdo de um arquivo HTML.
      * @param filename o nome do arquivo HTML (sem a extensão .html)
      * @return uma string contendo o conteúdo do arquivo HTML
