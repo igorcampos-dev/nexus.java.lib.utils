@@ -1,6 +1,5 @@
 package com.nexus.utils;
 
-import org.springframework.stereotype.Service;
 import java.security.SecureRandom;
 import java.util.Base64;
 
@@ -8,7 +7,6 @@ import java.util.Base64;
  * Classe utilitária com métodos para gerar hash aleatório, substituir espaços codificados em URLs,
  * formatar CPF e converter bytes para base64.
  */
-@Service
 public class Utils {
 
     // Conjunto de caracteres para gerar o hash aleatório

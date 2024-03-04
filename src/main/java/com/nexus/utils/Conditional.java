@@ -3,7 +3,7 @@ package com.nexus.utils;
 import jdk.jfr.Experimental;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import java.util.function.Supplier;
 
 /**
@@ -14,7 +14,7 @@ import java.util.function.Supplier;
  * @param <T> o tipo de retorno para a operação condicional
  */
 @Experimental
-@Service
+@Component
 @AllArgsConstructor
 @NoArgsConstructor
 public class Conditional<T>{

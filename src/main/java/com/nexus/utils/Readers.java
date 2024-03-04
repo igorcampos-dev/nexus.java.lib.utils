@@ -1,6 +1,6 @@
 package com.nexus.utils;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 /**
  * Classe utilitária para leitura de arquivos HTML.
  */
-@Service
+@Component
 public class Readers{
 
     private static String PATH = "src/main/resources/messages/actions/";
