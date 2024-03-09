@@ -1,35 +1,12 @@
 # Project Nexus - Biblioteca de Utilidades
 
-Esta é uma biblioteca de utilidades desenvolvida como parte do projeto Nexus. O objetivo principal desta biblioteca é fornecer funcionalidades úteis para os meus projetos.
+A **Biblioteca de Utilidades** do projeto Nexus foi desenvolvida com o objetivo de fornecer funcionalidades úteis para os seus projetos. Se você está buscando maneiras de otimizar e aprimorar suas aplicações, esta biblioteca pode ser uma excelente adição.
 
-## Como usar
+## Como Utilizar
 
-Para usar esta biblioteca, você precisa adicionar as seguintes dependências e repositórios ao seu arquivo `pom.xml`:
+Siga os passos abaixo para começar a usar a Biblioteca de Utilidades:
 
-### Dependências
+1. Acesse o site do [JitPack](https://jitpack.io/#igorcampos-dev/nexus.java.lib.utils) através deste link.
+2. Na seção de **Releases**, clique no botão "Get It" abaixo do campo "Status". Isso indica que a biblioteca está compilando corretamente.
+3. No seu projeto, adicione as duas dependências conforme explicado no site do JitPack.
 
-Inclua a seguinte dependência dentro da tag `<dependencies>` do seu `pom.xml`:
-
-```xml
-<dependencies>
-    <dependency>
-        <groupId>com.nexus</groupId>
-        <artifactId>utils</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-    </dependency>
-    <!-- outras dependências aqui -->
-</dependencies>
-```
-
-Inclua a seguinte dependência dentro da tag `<repositories>` do seu `pom.xml`:
-
-```xml
-<repositories>
-    <repository>
-        <id>lib-utils</id>
-        <url>https://raw.githubusercontent.com/igorcampos-dev/nexus.java.lib.utils/master/target/</url>
-    </repository>
-    <!-- outros repositórios aqui -->
-</repositories>
-
-```
