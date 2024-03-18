@@ -1,6 +1,5 @@
 package com.nexus.utils;
 
-import java.util.List;
 
 public final class Objects {
 
@@ -12,9 +11,33 @@ public final class Objects {
      * @param <T> o tipo dos elementos na lista
      * @throws RuntimeException se a lista estiver vazia
      */
-    public static <T> void requireNonEmpty(List<T> obj, RuntimeException e) {
-        if (obj.isEmpty()) {
+
+    public static <T> void requireNonEmpty(T obj, RuntimeException e) {
+        if (obj == null) {
             throw e;
         }
     }
+
+    /**
+     * Lança a exceção passada por parâmetro se a condição for verdadeira.
+     * @param condition A condição a ser verificada.
+     * @param exception A exceção a ser lançada se a condição for verdadeira.
+     */
+    public static void throwIfTrue(boolean condition, RuntimeException exception) {
+        if (condition) {
+            throw exception;
+        }
+    }
+
+    /**
+     * Lança a exceção passada por parâmetro se a condição for falsa.
+     * @param condition A condição a ser verificada.
+     * @param exception A exceção a ser lançada se a condição for verdadeira.
+     */
+    public static void throwIfFalse(boolean condition, RuntimeException exception) {
+        if (!condition) {
+            throw exception;
+        }
+    }
+
 }
