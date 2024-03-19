@@ -1,6 +1,8 @@
 package com.nexus.utils;
 
 
+import java.util.Collection;
+
 public final class Objects {
 
     /**
@@ -12,8 +14,23 @@ public final class Objects {
      * @throws RuntimeException se a lista estiver vazia
      */
 
-    public static <T> void requireNonEmpty(T obj, RuntimeException e) {
+    public static <T> void requireNonNull(T obj, RuntimeException e) {
         if (obj == null) {
+            throw e;
+        }
+    }
+
+    /**
+     * Verifica se uma coleção não é nula e não está vazia.
+     *
+     * @param collection A coleção a ser verificada.
+     * @param e A exceção a ser lançada se a coleção for nula ou vazia.
+     * @throws RuntimeException A exceção fornecida se a coleção for nula ou vazia.
+     *
+     * @param <T> O tipo da coleção. Deve estender a classe Collection.
+     */
+    public static <T extends Collection<?>> void requireNonEmpty(T collection, RuntimeException e) {
+        if (collection == null || collection.isEmpty()) {
             throw e;
         }
     }

@@ -12,7 +12,7 @@ public class ObjectsTest {
     public void testRequireNonEmpty_Success() {
         List<String> list = new ArrayList<>();
         list.add("elemento");
-        Objects.requireNonEmpty(list, new RuntimeException("Lista vazia"));
+        Objects.requireNonNull(list, new RuntimeException("Lista vazia"));
     }
 
     @Test
